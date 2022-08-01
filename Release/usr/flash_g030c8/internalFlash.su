@@ -1,0 +1,5 @@
+../usr/flash_g030c8/internalFlash.c:55:12:simulatedEEPROM_firstEmptyAddr256	12	static
+../usr/flash_g030c8/internalFlash.c:73:12:simulatedEEPROM_read256	8	static
+../usr/flash_g030c8/internalFlash.c:34:12:simulatedEEPROM_write	304	static
+../usr/flash_g030c8/internalFlash.c:20:12:simulatedEEPROM_read	280	static
+../usr/flash_g030c8/internalFlash.c:14:6:setupSimulatedEEPROM	0	static

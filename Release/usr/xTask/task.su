@@ -1,0 +1,4 @@
+../usr/xTask/task.c:119:11:doCommand.part.0.constprop.isra	32	static
+../usr/xTask/task.c:157:13:task16	520	static
+../usr/xTask/task.c:44:6:taskIrq	0	static
+../usr/xTask/task.c:58:6:taskPolling	16	static

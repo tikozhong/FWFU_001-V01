@@ -1,0 +1,4 @@
+../usr/gpio_output/output.c:77:13:outputWritePinHEX	24	static
+../usr/gpio_output/output.c:112:13:outputTogglePin	16	static
+../usr/gpio_output/output.c:93:13:outputWritePin	16	static
+../usr/gpio_output/output.c:24:12:outputDevSetup	24	static
