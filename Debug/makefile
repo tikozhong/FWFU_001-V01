@@ -9,6 +9,16 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include usr/xUartDev/subdir.mk
+-include usr/xTask/subdir.mk
+-include usr/xRs485Dev/subdir.mk
+-include usr/xRingBuffer/subdir.mk
+-include usr/xMisc/subdir.mk
+-include usr/xCRC16/subdir.mk
+-include usr/gpio_output/subdir.mk
+-include usr/gpio_input/subdir.mk
+-include usr/flash_g030c8/subdir.mk
+-include usr/board_gpio/subdir.mk
 -include Drivers/STM32G0xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk

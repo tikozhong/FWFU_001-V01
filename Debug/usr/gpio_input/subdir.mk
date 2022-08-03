@@ -5,38 +5,26 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Core/Src/main.c \
-../Core/Src/stm32g0xx_hal_msp.c \
-../Core/Src/stm32g0xx_it.c \
-../Core/Src/syscalls.c \
-../Core/Src/sysmem.c \
-../Core/Src/system_stm32g0xx.c 
+../usr/gpio_input/input.c \
+../usr/gpio_input/inputCmd.c 
 
 OBJS += \
-./Core/Src/main.o \
-./Core/Src/stm32g0xx_hal_msp.o \
-./Core/Src/stm32g0xx_it.o \
-./Core/Src/syscalls.o \
-./Core/Src/sysmem.o \
-./Core/Src/system_stm32g0xx.o 
+./usr/gpio_input/input.o \
+./usr/gpio_input/inputCmd.o 
 
 C_DEPS += \
-./Core/Src/main.d \
-./Core/Src/stm32g0xx_hal_msp.d \
-./Core/Src/stm32g0xx_it.d \
-./Core/Src/syscalls.d \
-./Core/Src/sysmem.d \
-./Core/Src/system_stm32g0xx.d 
+./usr/gpio_input/input.d \
+./usr/gpio_input/inputCmd.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-Core/Src/%.o Core/Src/%.su: ../Core/Src/%.c Core/Src/subdir.mk
+usr/gpio_input/%.o usr/gpio_input/%.su: ../usr/gpio_input/%.c usr/gpio_input/subdir.mk
 	arm-none-eabi-gcc "$<" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G030xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -I"F:/project/ESL/ESL22-FU001-V01_GPIO1608/FW/FWFU_001-V01/usr/board_gpio" -I"F:/project/ESL/ESL22-FU001-V01_GPIO1608/FW/FWFU_001-V01/usr/flash_g030c8" -I"F:/project/ESL/ESL22-FU001-V01_GPIO1608/FW/FWFU_001-V01/usr/gpio_input" -I"F:/project/ESL/ESL22-FU001-V01_GPIO1608/FW/FWFU_001-V01/usr/gpio_output" -I"F:/project/ESL/ESL22-FU001-V01_GPIO1608/FW/FWFU_001-V01/usr/xCRC16" -I"F:/project/ESL/ESL22-FU001-V01_GPIO1608/FW/FWFU_001-V01/usr/xMisc" -I"F:/project/ESL/ESL22-FU001-V01_GPIO1608/FW/FWFU_001-V01/usr/xRingBuffer" -I"F:/project/ESL/ESL22-FU001-V01_GPIO1608/FW/FWFU_001-V01/usr/xRs485Dev" -I"F:/project/ESL/ESL22-FU001-V01_GPIO1608/FW/FWFU_001-V01/usr/xTask" -I"F:/project/ESL/ESL22-FU001-V01_GPIO1608/FW/FWFU_001-V01/usr/xUartDev" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@"
 
-clean: clean-Core-2f-Src
+clean: clean-usr-2f-gpio_input
 
-clean-Core-2f-Src:
-	-$(RM) ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/stm32g0xx_hal_msp.d ./Core/Src/stm32g0xx_hal_msp.o ./Core/Src/stm32g0xx_hal_msp.su ./Core/Src/stm32g0xx_it.d ./Core/Src/stm32g0xx_it.o ./Core/Src/stm32g0xx_it.su ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32g0xx.d ./Core/Src/system_stm32g0xx.o ./Core/Src/system_stm32g0xx.su
+clean-usr-2f-gpio_input:
+	-$(RM) ./usr/gpio_input/input.d ./usr/gpio_input/input.o ./usr/gpio_input/input.su ./usr/gpio_input/inputCmd.d ./usr/gpio_input/inputCmd.o ./usr/gpio_input/inputCmd.su
 
-.PHONY: clean-Core-2f-Src
+.PHONY: clean-usr-2f-gpio_input
 

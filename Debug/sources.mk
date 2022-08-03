@@ -24,4 +24,14 @@ SUBDIRS := \
 Core/Src \
 Core/Startup \
 Drivers/STM32G0xx_HAL_Driver/Src \
+usr/board_gpio \
+usr/flash_g030c8 \
+usr/gpio_input \
+usr/gpio_output \
+usr/xCRC16 \
+usr/xMisc \
+usr/xRingBuffer \
+usr/xRs485Dev \
+usr/xTask \
+usr/xUartDev \
 

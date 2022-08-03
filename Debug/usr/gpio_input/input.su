@@ -1,0 +1,3 @@
+../usr/gpio_input/input.c:12:6:InputDevSetup	32	static
+../usr/gpio_input/input.c:35:13:inputPolling	32	static
+../usr/gpio_input/input.c:61:11:inputReadPin	16	static

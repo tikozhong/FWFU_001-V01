@@ -1,0 +1,12 @@
+../usr/xTask/task.c:44:6:taskIrq	8	static
+../usr/xTask/task.c:58:6:taskPolling	8	static
+../usr/xTask/task.c:74:13:task0	8	static
+../usr/xTask/task.c:84:13:taskRT4	8	static
+../usr/xTask/task.c:92:13:task4	8	static
+../usr/xTask/task.c:102:13:task8	8	static
+../usr/xTask/task.c:110:13:commandFormat	24	static
+../usr/xTask/task.c:119:11:doCommand	32	static
+../usr/xTask/task.c:157:13:task16	544	static
+../usr/xTask/task.c:189:13:task32	8	static
+../usr/xTask/task.c:197:13:task64	8	static
+../usr/xTask/task.c:205:13:task128	8	static
